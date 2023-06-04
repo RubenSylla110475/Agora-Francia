@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inscription | Agora Fianca</title>
+	<link rel="stylesheet" href="Style_Accueil.css">
+</head>
+<body>
+	<script>
+          function connexion() {
+            window.location.href = "login.html";
+          }
+          function inscription() {
+            window.location.href = "signin.php";
+          }
+      </script>
+	<div class="container">
+		<div class="logo">
+			<<a href="Accueil.php"><img src="logo.png" alt="Logo" height = "200px"></a>
+		</div>
+		<h2>Inscription</h2>
+		<form action="signin.php" method="post">
+			<label for="nom">Nom :</label>
+			<input type="text" id="nom" name="nom" required>
+
+			<label for="prenom">Pr&eacute;nom :</label>
+			<input type="text" id="prenom" name="prenom" required>
+
+			<label for="pseudo">Pseudo :</label>
+			<input type="text" id="pseudo" name="pseudo" required>
+
+			<label for="email">E-mail :</label>
+			<input type="email" id="email" name="email" pattern=".+@edu.ece\.fr" size="30" required>
+
+			<label for="numeroTelephone">Num&eacute;ro de T&eacute;l&eacute;phone :</label>
+			<input type="tel" id="numeroTelephone" name="numeroTelephone">
+
+			<label for="mdp">Mot de passe :</label>
+			 <input type="password" id="mdp" name="mdp" required>
+
+			<label for="pp">Photo de profil :</label>
+			<input type="file" id="pp" name="pp" accept="imageProfils/png, imageProfils/jpeg, imageProfils/jpg, imageProfils/JPG">
+
+			<label for="pc">Photo de couverture :</label>
+			<input type="file" id="pc" name="pc" accept="imageProfils/png, imageProfils/jpeg, imageProfils/jpg, imageProfils/JPG">
+
+			<label for="typeCompte">Type de compte :</label>
+			<fieldset>
+				<div class="radio-label">
+					<input type="radio" id="acheteur" name="typeCompte" value="1" required>
+					<body for="1">Acheteur</body>
+				</div>
+				<div class="radio-label">
+					<input type="radio" id="vendeur" name="typeCompte" value="2" required>
+					<body for="2">Vendeur</body>
+				</div>
+				<div class="radio-label">
+					<input type="radio" id="admin" name="typeCompte" value="3" required>
+					<body for="3">Administrateur</body>
+				</div>
+			</fieldset>
+
+
+			<input type="submit" value="S'inscrire">
+			
+			<button class="custom-button" onclick= "connexion()">Connexion &agrave; un compte d&eacute;j&agrave; existant</button>
+			
+		</form>
+	</div>
+</body>
+</html>

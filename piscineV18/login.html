@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connexion | Agora Fianca</title>
+    <link rel="stylesheet" href="Style_Accueil.css">
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("inscription-link").addEventListener("click", function(event) {
+                event.preventDefault();  // Empêche le comportement par défaut du lien
+
+                // Redirection vers la page d'inscription
+                window.location.href = "signin.html";
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="Accueil.php"><img src="logo.png" alt="Logo" height = "200px"></a>
+        </div>
+        <h2>Connexion</h2>
+        <form action="login.php" method="post">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <button class="custom-button" onclick=window.location.href="compte.php">Se connecter</button>
+            <p class="text-center">Vous n'avez pas de compte ? <a href="#" id="inscription-link">Inscrivez-vous</a></p>
+        </form>
+    </div>
+</body>
+</html>
